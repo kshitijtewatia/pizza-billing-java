@@ -1,3 +1,4 @@
+
 import java.util.Scanner;
 
 
@@ -7,38 +8,37 @@ public class Main {
 
         Scanner sc = new Scanner(System.in);
 
-        System.out.println("🍕 Welcome to Pizza Shop 🍕");
-        System.out.println("1. Veg Pizza (₹300)");
-        System.out.println("2. Non-Veg Pizza (₹400)");
-        System.out.print("Enter your choice: ");
-        int choice = sc.nextInt();
+        System.out.println("🍕 Welcome to kshityyy Pizza Shop 🍕");
+        System.out.println("hello which pizza you want");
+        System.out.println("1: regular pizza");
+        System.out.println("2: deluxe pizza");
+        int pizzaType = sc.nextInt();
+
+        System.out.println("1 veg");
+        System.out.println("2: NON VEG");
+        boolean isVeg = (sc.nextInt()==1);
 
         Pizza pizza;
+        if (pizzaType == 2) {
+            pizza = new DeluxePizza(isVeg);
 
-        if (choice == 1) {
-            pizza = new Pizza(true);
-        } else {
-            pizza = new Pizza(false);
+            
+        }else{
+            pizza = new Pizza(isVeg);
         }
 
-        System.out.print("Add extra cheese? (1 = Yes, 0 = No): ");
-        int cheese = sc.nextInt();
-        if (cheese == 1) {
-            pizza.addExtraCheese();
+        if (pizzaType == 1) {
+            System.out.println("want to add extra cheese (1=yes/0=no)");
+            if (sc.nextInt()==1) pizza.addExtraCheese();
+            
+            System.out.println("want extra topings (1=yes/0=no)");
+            if (sc.nextInt()==1) pizza.addExtraToppings();
         }
 
-        System.out.print("Add extra toppings? (1 = Yes, 0 = No): ");
-        int toppings = sc.nextInt();
-        if (toppings == 1) {
-            pizza.addExtraToppings();
-        }
+        System.out.println("want to take away that pizza (1=yes/0=no)");
+        if(sc.nextInt()==1) pizza.takeAway();
 
-        System.out.print("Take away? (1 = Yes, 0 = No): ");
-        int takeAway = sc.nextInt();
-        if (takeAway == 1) {
-            pizza.takeAway();
-        }
-
+   
         System.out.println("\n🧾 Final Bill");
         pizza.getBill();
 
