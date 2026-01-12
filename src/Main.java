@@ -8,7 +8,7 @@ public class Main {
 
         Scanner sc = new Scanner(System.in);
 
-        System.out.println("🍕 Welcome to kshityyy Pizza Shop 🍕");
+        System.out.println("🍕 Welcome to  Pizza Shop 🍕");
         System.out.println("hello which pizza you want");
         System.out.println("1: regular pizza");
         System.out.println("2: deluxe pizza");
@@ -40,6 +40,8 @@ public class Main {
 
    
         System.out.println("\n🧾 Final Bill");
+
+    
         pizza.getBill();
 
         sc.close();
