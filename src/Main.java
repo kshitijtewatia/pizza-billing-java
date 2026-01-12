@@ -8,7 +8,7 @@ public class Main {
 
         Scanner sc = new Scanner(System.in);
 
-        System.out.println("🍕 Welcome to  Pizza Shop 🍕");
+        System.out.println("🍕 Welcome to KSHITYY Pizza Shop 🍕");
         System.out.println("hello which pizza you want");
         System.out.println("1: regular pizza");
         System.out.println("2: deluxe pizza");
