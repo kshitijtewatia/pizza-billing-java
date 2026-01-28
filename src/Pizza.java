@@ -15,7 +15,7 @@ public class Pizza {
     public Pizza(boolean isVeg) {
         this.isVeg = isVeg;
 
-        if (isVeg) {
+        if (isVeg) {           //if isveg = true then price and base price of pizza is 300 otherwise nonveg price
             price = 300;
             basePrice = 300;
         } else {
@@ -24,35 +24,35 @@ public class Pizza {
         }
     }
 
-    public void addExtraCheese() {
+    public void addExtraCheese() {  //if add extracheese than this function will call 
         isextraCheeseAdded = true;
-        price += 50;
+        price += extraCheesePrice;
         System.out.println("Extra cheese added");
     }
 
-    public void addExtraToppings() {
+    public void addExtraToppings() { //if add extratopings than this function will call
         isextraTopingsAdded = true;
-        price += 70;
+        price += extraTopingsPrice;
         System.out.println("Extra toppings added");
     }
 
-    public void takeAway() {
+    public void takeAway() { //if takeaway opted than this will call
         isbagpackOpted = true;
-        price += 30;
+        price += bagpackPrice;
         System.out.println("Take away opted");
     }
 
-    public void getBill() {
+    public void getBill() {  
         System.out.println("hello there is your bill");
         System.out.println("base price of your pizza is: " + basePrice );
-        if (isextraCheeseAdded) {
+        if (isextraCheeseAdded == true) {
             System.out.println("you added extra cheese: " + extraCheesePrice);
             }
-        if (isextraTopingsAdded) {
+        if (isextraTopingsAdded == true) {
             System.out.println("you added extra topings: " + extraTopingsPrice);
             
         }
-        if (isbagpackOpted) {
+        if (isbagpackOpted == true) {
             System.out.println("you opted bagpack also: " + bagpackPrice);
             
         }
